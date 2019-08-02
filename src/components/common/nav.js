@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { push } from 'connected-react-router';
 import { actionsCreators } from '../../store/feed';
 const NavStyled = styled.nav`
   width: 100%;
@@ -26,6 +27,9 @@ function Nav() {
     if (selectedCountry !== country) {
       dispatch(actionsCreators.setNewsCountry(selectedCountry));
       dispatch(actionsCreators.fetchCountryFeed());
+      dispatch(push({
+        pathname: '/'
+      }))
     }
   }
 
