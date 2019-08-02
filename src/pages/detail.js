@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { actionsCreators } from '../store/feed';
-import { push } from 'react-router-redux';
+import { push } from 'connected-react-router';
 import styled from 'styled-components';
 const ContentStyled = styled.div`
   > * {
